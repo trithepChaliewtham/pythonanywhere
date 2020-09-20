@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-from .models import Question, Choice
+from .models import Fruit,Fruit_Type
 
-admin.site.register(Question)
-admin.site.register(Choice)
+
+admin.site.register(Fruit)
+admin.site.register(Fruit_Type)

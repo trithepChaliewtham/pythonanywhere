@@ -1,16 +1,26 @@
 from django.db import models
 
-class Question(models.Model):
-    question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+
+#
+#
+#
+class Fruit(models.Model):
+
+    # Fruit_ID = models.IntegerField(pirmary_key=True)
+    Fruit_ID = models.IntegerField(max_length=10)
+    Fruit_Name = models.CharField(max_length=200)
+
 
     def __str__(self):
-        return f'{self.question_text}'
 
-class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
-    choice_text = models.CharField(max_length=200)
-    votes = models.IntegerField(default=0)
+        return f'{self.Fruit_ID}'
+
+class Fruit_Type(models.Model):
+
+    FruitID = models.ForeignKey(Fruit, on_delete=models.CASCADE)
+    Fruit_Price = models.CharField(max_length=200)
+    Season_of_Fruit = models.CharField(max_length=200)
 
     def __str__(self):
-        return f'{self.question.question_text} - {self.choice_text} - {self.votes}'
+
+        return f'{self.Fruit_Price} , {self.Season_of_Fruit}'

@@ -5,6 +5,15 @@ from django.http import HttpResponse
 def index(req):
 	return render(req, 'myweb/index.html')
 
+def LogIn(req):
+
+	return render(req, 'myweb/LogIn.html')
+
+
+def register(req):
+
+	return render(req, 'myweb/register.html')
+
 def united(req):
 	return render(req, 'myweb/united.html')
 
