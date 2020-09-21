@@ -57,11 +57,31 @@
   <!-- Typography
       ================================================== -->
     <div class="container-register">
-      <form method="POST">
-        {% csrf_token%}
-        {{ form.as_p }}
-        <button type="submit" > re</button>  
-      </form>
+      <form action="/test">
+
+        <h1>Register</h1>
+        <p>
+          <font size=5>Please fill in this form to create an account</font>
+        </p>
+        <hr>
+
+        <label for="account"><b>
+            <font size=5>Account :</font>
+          </b></label>
+        <input type="text" placeholder="Enter account" name="username" id="account" required>
+        <br />
+        <label for="psw"><b>
+            <font size=5>Password : </font>
+          </b></label>
+        <input type="password" placeholder="Enter Password" name="password1" id="psw" required>
+        <br />
+        <label for="psw-repeat"><b>
+            <font size=5>Repeat Password</font>
+          </b></label>
+        <input type="password" placeholder="Repeat Password" name="password2" id="psw-repeat" required>
+        <hr>
+        <button type="submit" class="registerbtn">Register</button>
+        </form>
     </div>
   <!-- Headings -->
 

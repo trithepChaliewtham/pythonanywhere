@@ -7,7 +7,7 @@ from django.db import models
 class Fruit(models.Model):
 
     # Fruit_ID = models.IntegerField(pirmary_key=True)
-    Fruit_ID = models.IntegerField(max_length=10)
+    Fruit_ID = models.IntegerField()
     Fruit_Name = models.CharField(max_length=200)
 
 

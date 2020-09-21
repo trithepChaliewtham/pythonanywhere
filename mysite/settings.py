@@ -23,10 +23,18 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'l#d)=k3^2f9^39&__hb26y@cf+p95jv#g=p67-5yf9a1gi-$1+'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+
 DEBUG = True
 
 ALLOWED_HOSTS = [u'localhost',u'127.0.0.1',u'trithep.pythonanywhere.com']
 
+STATICFILES_DIRS = [
+
+    os.path.join(BASE_DIR, "static"),
+
+]
+print("First is : ",os.path.join(BASE_DIR, "static"))
 
 # Application definition
 
@@ -100,7 +108,9 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
+LOGIN_URL = 'LogIn'
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.1/topics/i18n/
@@ -125,5 +135,7 @@ STATIC_URL = '/static/'
 # see https://help.pythonanywhere.com/pages/DjangoStaticFiles for more info
 MEDIA_ROOT = u'/home/trithep/mysite/media'
 MEDIA_URL = '/media/'
-STATIC_ROOT = u'/home/trithep/mysite/static'
+
+STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+
 STATIC_URL = '/static/'

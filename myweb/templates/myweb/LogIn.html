@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 
 </head>
@@ -10,18 +11,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <link rel="stylesheet" href="https://bootswatch.com/4/superhero/bootstrap.css" media="screen">
     <link rel="stylesheet" href="https://bootswatch.com/_assets/css/custom.min.css">
+    <link rel="stylesheet" href="static/css/test.css">
   </head>
-  <style>
-
-        body {
-           background-image: url("/static/Animal.jpg");
-           background-repeat: no-repeat;
-           background-attachment: fixed;
-           background-size: cover;
-        }
-
-  </style>
-  <body color = "dark">
+  
+  <body style="background-color :rgb(56, 28, 4);background-image: url(https://i.pinimg.com/originals/71/ce/81/71ce819f3e164b1cdcc92f40e12e6b18.jpg); width:100%; height:auto; position:absolute;">
     <!DOCTYPE --------------------------------Add Image -------------------------------------html>
 
 
@@ -57,18 +50,24 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="page-header">
-              <h1 id="typography"><center>เข้าสู่ระบบ    </center></h1>
+              <div class="container-login">
+              <h1 id="typography"><center style="color:black;">เข้าสู่ระบบ    </center></h1>
 
-                <form action=/index>
+                <form action="{% url 'LogIn' %}" method="POST">
+                  {% csrf_token %}
                     <div class="container">
                         <center>
 
-                            <label><font size = 5>Username : </font></label>
-                            <input type="text" placeholder="Enter Username" name="username" required>
+                            <label><font size = 5 style="color:black;">Username : </font></label>
+                            <input type="text" placeholder="Enter Username" name="username" required autocomplete="off">
                             <br/>
-                            <label><font size = 5>Password : </font></label>
-                            <input type="password" placeholder="Enter Password" name="password" required>
+                            <label><font size = 5 style="color:black;">Password : </font></label>
+                            <input type="password" placeholder="Enter Password" name="password" required >
                             <br/>
+                            {% if form.errors %}
+                              <p style="color:black;"> Try again </p>
+                            {% endif %}
+
                             <div class="bs-component">
                                   <button type="submit" class="btn btn-primary btn-sm">Log In</button>
 
@@ -90,6 +89,7 @@
                         </center>
                     </div>
                 </form>
+                </div>
             </div>
           </div>
         </div>
@@ -121,7 +121,11 @@
           </div>
         </div>
 
-
+        <footer>
+          <div class="container-footer">
+          <p class="footers"><font size = 10 style="color:black">@-All right reserved</font></p>
+          </div>
+        </footer>      
     <!DOCTYPE --------------------------------End Navigator-bar -------------------------------------html>
 
 
