@@ -48,11 +48,11 @@
           <li class="nav-item dropdown">
             <a href="register" id="themes" style="text-decoration:none">Contact </a>
             &nbsp; &nbsp;
-  
+            
           <li class="nav-item dropdown">
-              <a href="logout"><button  id="themes" style="text-decoration:none">log out </button></a>
+              <a href="logout" id="button-log-out"><button   style="text-decoration:none">log outs </button></a>
               &nbsp; &nbsp;
-      
+            
 
 
         </ul>
@@ -161,7 +161,7 @@
     </footer>
 
     <!DOCTYPE --------------------------------End Navigator-bar -------------------------------------html>
-    {% if user.is_authenticated %}<script>alert("Success : {{ user }}");</script>{% endif %}
+    {% if user.is_authenticated %}<script>alert("Success : {{ user }}");</script>{% else %} <script>alert("Log out ");</script>{% endif %}
     <script type="text/javascript" src="static/css/test.js"></script>
     <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>
