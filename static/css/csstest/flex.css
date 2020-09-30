@@ -1,0 +1,46 @@
+.footer-flex-container{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+
+    box-sizing: border-box;
+
+    
+}
+
+.flex-under-Inform{
+    display: flex;
+    flex-direction: row;
+    width:100%;
+    height: auto;
+    box-sizing: border-box;
+    background-color: none;
+
+    
+}
+
+.flex-item{
+    border:2px solid salmon;
+    background-color: white;
+    width:15%;
+    margin-left:5rem;
+
+}
+.flex-item2{
+    border:2px solid rgb(180, 39, 39);
+    background-color: #A9A9A9;
+    width:2.75%;
+    
+}
+.flex-item3{
+    border:2px solid rgb(114, 150, 250);
+    background-color: white;
+    width:25%;
+    margin-left: 1rem;
+}
+.flex-item4{
+    border:2px solid rgb(114, 250, 243);
+    background-color: white;
+    width:25%;
+    margin-left: 1rem;
+}

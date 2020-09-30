@@ -18,18 +18,20 @@ def signup(request):
     else:
         form = UserCreationForm()
     return render(request, 'myweb/register.html', {'form': form})
+
 def index(req):
 	return render(req, 'myweb/index.html')
 
+def ViewPrice(req):
+    	return render(req, 'myweb/ViewPrice.html')
+
+def CheckInform(req):
+    	return render(req, 'myweb/CheckInform.html')
 def LogIn(req):
 
 	return render(req, 'myweb/LogIn.html')
 
 
 
-def united(req):
-	return render(req, 'myweb/united.html')
 
-def detail(request, question_id):
-    return render(request, 'myweb/detail.html')
 

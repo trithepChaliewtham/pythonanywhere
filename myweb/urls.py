@@ -15,8 +15,8 @@ urlpatterns = [
 
     path('', views.LogIn, name="LogIn-First"),
     path('index', views.index, name='home'),
-   
-    path('index',views.index),
+    path('ViewPrice', views.ViewPrice, name='ViewPrice'),
+    path('CheckInform', views.CheckInform, name='CheckInform'),
    
     path('register', views.signup, name='register'),
 
@@ -25,8 +25,8 @@ urlpatterns = [
     
     #--------------------------- log out ---------------------------#
     path('LogIn',auth_views.LoginView.as_view(template_name='myweb/LogIn.html'),name='LogIn'),
-
-
+    
+    
    
 
 ]

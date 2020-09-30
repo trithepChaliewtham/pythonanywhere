@@ -1,0 +1,108 @@
+.container-head{
+    position: fixed;
+    border: none;
+    background-color:gray;
+    width: 101.5%;
+    padding:1.25rem;
+    margin-top:-8px;
+    margin-left:-10px;
+    margin-right:-10px;
+
+    box-sizing: border-box;
+    box-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+
+}
+
+.container-body{
+
+    display: flex;
+    border:10px solid whitesmoke;
+    border-radius: 4px;
+    margin-top: 7rem;
+    margin-left:4.5rem;
+    
+    width: 90%;
+    background-color: aqua;
+    box-sizing: border-box;
+
+    
+
+
+}
+.Menu-bar1{
+    border:2.5px solid #BC8F8F;
+    border-radius: 5px;
+    margin-top:0.25rem;
+    background-color:#FFD700 ;
+    cursor:pointer;
+}
+.Menu-bar2{
+    border:2.5px solid #F4A460;
+    border-radius: 5px;
+    margin-top:0.25rem;
+    background-color:#FFD700 ;
+    cursor:pointer;
+}
+.Menu-bar3{
+    border:2.5px solid #F5DEB3;
+    border-radius: 5px;
+    margin-top:0.25rem;
+    background-color:#FFD700 ;
+    cursor:pointer;
+}
+.Menu-bar4{
+    border:2.5px solid #F5DEB3;
+    border-radius: 5px;
+    margin-top:0.25rem;
+    background-color:#FFD700 ;
+    cursor:pointer;
+}
+
+.content1{
+
+    color:red;
+    font-size:1.5rem;
+    border: 2px solid black;
+    width:15%;
+}
+
+.Menu-bar1:hover{
+    color:blue;
+    margin-left: 0.35rem;
+}
+.Menu-bar2:hover{
+    color:blue;
+}
+.Menu-bar4:hover{
+    color:blue;
+    margin-left: 0.35rem;
+}
+.content2{
+
+    color:red;
+    font-size:2.5rem;
+    border: 2px solid black;
+    background: linear-gradient(to left, #8f94fb, #4e54c8 );;
+    width:70%;
+    
+    
+
+    
+}
+.content3{
+
+    color:red;
+    font-size:2.5rem;
+    border: 2px solid black;
+    width:15%;
+    background-color: pink;
+}
+
+.Main-bar-body-content{
+
+    background-color: pink;
+    text-align: center;
+    border:5px solid #EEE8AA;
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+}
+

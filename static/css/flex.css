@@ -1,0 +1,28 @@
+.menu-bar-flex{
+    display:flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.menu-bar-flex-item1{
+
+    position: relative;
+    font-size:2rem;
+    background-color:none;
+    color:red;
+    width: 15%;
+    border-right: 2px solid black;
+    
+    text-align: center;
+}
+.menu-bar-flex-item2{
+    position: relative;
+    font-size:2rem;
+    background-color: none;
+    color:red;
+    width: 15%;
+    
+    border-right: 2px solid black;
+    text-align: center;
+}

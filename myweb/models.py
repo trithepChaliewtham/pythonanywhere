@@ -5,31 +5,32 @@ from django.db import models
 #
 #
 class Fruit(models.Model):
-
-    
-    Fruit_ID = models.IntegerField(null=False)
-    Fruit_Name = models.CharField(max_length=200)
-    
-
-
+    summer = 1
+    rainning = 2
+    winter = 3
+    allseason = 4
+    season_choices = (
+        (summer, 'ฤดูร้อน'),
+        (rainning, 'ฤดูฝน'),
+        (winter, 'ฤดูหนาว'),
+        (allseason, 'ทุกฤดู'),
+    )
+    FrName = models.CharField(max_length=200,default="Banana")
+    Season_Fruit = models.PositiveSmallIntegerField(choices=season_choices, default=summer)
+    Price = models.FloatField(default=0)
     def __str__(self):
+        
+        return f'{self.FrName}';
 
-        return f'{self.Fruit_ID},{self.Fruit_Name}'
+
 class Farm(models.Model):
-    Farm_ID = models.IntegerField(null=False)
-    Farm_Name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200, blank=True)
+    def __str__(self):
+        return f'{self.name}'
+
+class Link(models.Model):
+    Fruit = models.ForeignKey(Fruit, on_delete=models.CASCADE)
+    Farm = models.ForeignKey(Farm, on_delete=models.CASCADE)
 
     def __str__(self):
-        return f'{self.Farm_ID},{self.Farm_Name}'
-
-class Fruit_Type(models.Model):
-
-    FruitID = models.ForeignKey(Fruit, on_delete=models.CASCADE)
-    Fruit_Names = models.CharField(max_length=200)
-    Fruit_Price = models.CharField(max_length=200)
-    Season_of_Fruit = models.CharField(max_length=200)
-    FarmID = models.ForeignKey(Farm, on_delete=models.CASCADE)
-
-    def __str__(self):
-
-        return f'{self.Fruit_Name} ,{self.Fruit_Price} , {self.Season_of_Fruit}'
+        return f'{self.Fruit} - {self.Farm}'

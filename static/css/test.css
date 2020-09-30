@@ -9,7 +9,8 @@ html{
     width:80%;
     height:auto;
     left:10%;
-    border:10px solid white;
+    border:10px solid pink;
+    
     
     box-sizing: content-box;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -87,7 +88,7 @@ html{
 
 }
 a{
-    style="text-decoration:none"
+    text-decoration:none;
 }
 .context-flex01{
 
@@ -147,11 +148,13 @@ a{
 
     border: none;
     background-color: green;
+    margin-top:100px;
     
 
 }
 .footers{
 
+    
     margin-left:15px;
 }
 

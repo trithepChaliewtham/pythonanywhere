@@ -53,19 +53,20 @@
               <div class="container-login">
               <h1 id="typography"><center style="color:black;">เข้าสู่ระบบ    </center></h1>
 
-                <form action="{% url 'LogIn' %}" method="POST">
+                <form action="LogIn" method="POST">
                   {% csrf_token %}
                     <div class="container">
                         <center>
 
                             <label><font size = 5 style="color:black;">Username : </font></label>
-                            <input type="text" placeholder="Enter Username" name="username" required autocomplete="off">
+                            <input type="text" placeholder="Enter Username" name="username" required autocomplete="off" autofocus>
                             <br/>
                             <label><font size = 5 style="color:black;">Password : </font></label>
-                            <input type="password" placeholder="Enter Password" name="password" required >
+                            <input type="password" placeholder="Enter Password" name="password" required autocomplete="off" autofocus>
                             <br/>
                             {% if form.errors %}
                               <p style="color:black;"> Try again </p>
+                              <script>alert("Username or Password is incorrects")</script>
                             {% endif %}
 
                             <div class="bs-component">
@@ -76,7 +77,7 @@
                          <div class="col-lg-4">
                         <div class="bs-component">
                             <br/>
-                          <h2><font color = yellow >Hello World</font></h2>
+                          <h2><font color = pink >Hello World</font></h2>
 
                           <p class="text-warning">text-Waring.</p>
                           <p class="text-danger">text-Danger.</p>
