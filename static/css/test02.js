@@ -6,17 +6,16 @@ function showoutput(){
     output.innerHTML = "";
     let text = "";
     text += "<style>";
+    text += ".{margin-top: 1.5rem;text-align:center;color:black;}";
     text += ".color-p{color:Yellow;animation-name:getmove;position:relative;animation-delay:1s;animation-duration:4s;animation-iteration-count: infinite;z-index:2;}";
-    text += ".color-p:hover{color:blue;transition:3s;}"
-    text += ".background-item{padding:0.5rem;width:5%;left:40vh;top:10vh;border:2px solid black;background-color:black;animation-name:background-item-move;position:relative;animation-delay:1s;animation-duration:4s;animation-iteration-count: infinite;}";
-       
-    text += "@keyframes getmove{0% {left:0px;top:0px;} 25%{left:200px;top:0px;} 50%{left:200px;top:200px;} 75%{left:0px;top:200px;} 100%{left:0px;top:0px;}}";
-    text += "@keyframes background-item-move{0% {top:2250px;border-radius:0;} 100%{border-radius:10%}}";
+    text += ".color-p:hover{color:brown;transition:3s;}"
+    text += "@keyframes getmove{0% {left:40vh;top:0px;} 50%{left:40vh;top:100px;} 100%{left:40vh;top:0px;}}";
+    
     
     text += "</style>";
     text += "<p class=color-p>Reading document</p>";
     text += "<div class=container-circle>";
-    text += "<div class=background-item></div>";
+
     text += "</div>";
    
     conbody.style.height = "1300px";
@@ -128,7 +127,7 @@ let img2 = document.getElementById("img").addEventListener("click",changestyle2)
 //let output2 = document.getElementById("outputbody2");
 let img = document.getElementById("img").addEventListener("click",showimg);
 
-let showInform = document.getElementById("ShowInform")
+let showInform = document.getElementById("ShowInform");
 
 
 function infuc(){return alert("Something")}

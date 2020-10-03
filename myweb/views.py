@@ -4,6 +4,10 @@ from django.http import HttpResponse
 
 from django.contrib.auth import login, authenticate
 from django.contrib.auth.forms import UserCreationForm
+
+
+from .models import Farm,Fruit,Season
+from .form import *
 # Create your views here.
 def signup(request):
     if request.method == 'POST':
@@ -22,16 +26,73 @@ def signup(request):
 def index(req):
 	return render(req, 'myweb/index.html')
 
-def ViewPrice(req):
-    	return render(req, 'myweb/ViewPrice.html')
-
 def CheckInform(req):
     	return render(req, 'myweb/CheckInform.html')
 def LogIn(req):
 
 	return render(req, 'myweb/LogIn.html')
 
+#---------- database function ----------#
+
+def FarmInform(req):
+    
+    return "hello"
 
 
 
+def showFruit(testrequestreq):
+    fruit = Fruit.objects.all()
+    return render(testrequestreq ,'myweb/AllFruit.html' ,{'fruit':fruit})
 
+def addfarm(req):
+    if req.method == "POST":
+        form = addFarm(req.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("home")
+    else:
+        form = addFarm()
+        context = {'form':form}
+        return render(req, 'myweb/add.html',context)
+
+def addfruit(req):
+    if req.method == "POST":
+        form = addFruit(req.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("home")
+    else:
+        form = addFruit()
+        context = {'form':form}
+        return render(req, 'myweb/add.html',context)
+
+
+def search(req):
+    if req.method == "POST":
+        form = SearchForm(req.POST)
+        if form.is_valid():
+            searchby = form.cleaned_data['SearchBy']
+            keyword = form.cleaned_data['keyword']
+            if searchby == '1':
+                fruits = Fruit.objects.filter(Fruit_Name__contains=keyword)
+            elif searchby == '2':
+                try:
+
+                    keyword = float(keyword)
+
+                except:
+
+                    form = SearchForm()
+                    context = {'form':form}
+                    return render(req, 'myweb/SearchFruit.html',context)
+                fruits = Fruit.objects.filter(Price=keyword)
+                
+            elif searchby == '3':
+                fruits = Fruit.objects.filter(Season__SeasonName__contains=keyword)
+            elif searchby == '4':
+                fruits = Fruit.objects.filter(FarmName__Farm_Name__contains=keyword)
+            return render(req , "myweb/ShowFruit.html",{"fruits":fruits})
+    else:
+        form = SearchForm()
+        context = {'form':form}
+        return render(req, 'myweb/SearchFruit.html',context)

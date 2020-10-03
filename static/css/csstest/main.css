@@ -1,7 +1,7 @@
 .container-head{
     position: fixed;
     border: none;
-    background-color:gray;
+    background-color: #FFA07A;
     width: 101.5%;
     padding:1.25rem;
     margin-top:-8px;
@@ -84,7 +84,7 @@
     border: 2px solid black;
     background: linear-gradient(to left, #8f94fb, #4e54c8 );;
     width:70%;
-    
+  
     
 
     
@@ -104,5 +104,6 @@
     text-align: center;
     border:5px solid #EEE8AA;
     text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+    
 }
 

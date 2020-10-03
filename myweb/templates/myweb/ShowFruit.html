@@ -19,10 +19,7 @@
 
 <body style="background-color :rgb(56, 28, 4);background-image: url(https://i.pinimg.com/originals/71/ce/81/71ce819f3e164b1cdcc92f40e12e6b18.jpg); width:100%; height:auto; position:absolute;" >
   <!DOCTYPE --------------------------------Add Image -------------------------------------html>
-  <div class="container-picture">
-    <img src="static/Fruit.jpg" class="image01" style="-webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
-    box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);border-radius: 2rem;">
-  </div>
+  
 
 
   <!DOCTYPE --------------------------------Navigator-bar -------------------------------------html>
@@ -46,12 +43,8 @@
             <a href="register" id="themes" style="text-decoration:none">Contact </a>
             &nbsp; &nbsp;
 
-            <li class="nav-item dropdown">
-              <a href="{% url 'AllFruit' %}" id="button-log-out">ดูรายการผลไม้</a>
-              &nbsp; &nbsp;
-
           <li class="nav-item dropdown">
-              <a href="{% url 'addfruit' %}" id="button-log-out">เพิ่มข้อมูลผลไม้</a>
+              <a href="{% url 'addfruit' %}" id="button-log-out"><button   style="text-decoration:none">add</button></a>
               &nbsp; &nbsp;
             
           <li class="nav-item dropdown">
@@ -91,7 +84,7 @@
         <div class="page-header" style="text-align: center;">
           <div class="dropdown" >
             <h1 class="head1" id="typography" >
-              <div class="container-body-head-text"><div style="color:black;text-align: center;font-family: 'Niramit', sans-serif;">ผลไม้ประจำฤดู</div></div>
+              <div class="container-body-head-text"><div style="color:black;text-align: center;font-family: 'Niramit', sans-serif;">ผลการค้นหา</div></div>
               <div class="dropdown-content" style="color:blue"> 
                 <p><font size = 5>Information About Covid19 has been update since 2020 up to now</font></p>
 
@@ -107,30 +100,9 @@
     <!-- Headings -->
     <div class="container-body" id="show" style="text-align: center;">
       <div class="fonts">
-        <p style="color:yellow">เดือนมกราคม</p>
-        <p>ได้แก่ ส้มเกลี้ยง ฝรั่ง มะขามป้อม ละมุด อ้อย องุ่นสับปะรด มะตูม ชมพู่กระจับ </p>
-        <p style="color:yellow">เดือนกุมภาพันธ์</p>
-        <p>ได้แก่ มะขามเทศ มะขามป้อม องุ่น มะตูม อ้อย ลูกตาลอ่อน แตงโมสับปะรด กล้วยหอม ชมพู่ </p>
-        <p style="color:yellow">เดือนมีนาคมม</p>
-        <p>ได้แก่ แตงโม ขนุน กล้วยหอม มะปราง มะม่วง กล้วยน้ำว้า</p>
-        <p style="color:yellow">เดือนเมษายน</p>
-        <p>ได้แก่ ทุเรียน มะม่วง ลูกหว้า มะไฟ แตงโม ชมพู่ ลิ้นจี่ ขนุน กล้วยหอม</p>
-        <p style="color:yellow">เดือนพฤษภาคม</p>
-        <p>ได้แก่ เงาะ ลิ้นจี่ ลูกหว้า ขนุน ทุเรียน มะม่วง ระกำ</p>
-        <p style="color:yellow">เดือนมิถุนายน</p>
-        <p>ได้แก่ มังคุด กระท้อน ระกำ เงาะ ทุเรียน สับปะรด ขนุน มะละกอสุก</p>
-        <p style="color:yellow">เดือนกรกฎาคม</p> 
-        <p>ได้แก่ กล้วยไข่ กล้วยหอม กล้วยหักมุก กล้วยน้ำว้า ส้มโอ มะยม</p>
-        <p style="color:yellow">เดือเดือนสิงหาคม</p>
-        <p>ได้แก่ กล้วยไข่ กล้วยหอม ฝรั่ง สับปะรด ลางสาด ลำไย น้อยหน่า</p>
-        <p style="color:yellow">เดือนกันยายน</p>
-        <p>ได้แก่ กล้วยไข่ กล้วยหอม กล้วยน้ำว้า ฝรั่ง สับปะรด ส้มโอ</p>
-        <p style="color:yellow">เดือนตุลาคม</p>
-        <p>ได้แก่ กล้วยไข่ กล้วยหอม กล้วยน้ำว้า ฝรั่ง ส้มเขียวหวาน</p>
-        <p style="color:yellow">เดือนพฤศจิกายน</p>
-        <p>ได้แก่ กล้วยไข่ กล้วยหอม กล้วยน้ำว้า ละมุด อ้อย มะละกอ</p>
-        <p style="color:yellow">เดือนธันวาคม</p>
-        <p>ได้แก่ กล้วยหอม กล้วยน้ำว้า ละมุด อ้อย มะละกอ แตงโม</p>
+        {% for fruit in fruits %}
+        <div>{{ fruit.Fruit_Name }}</div>
+        {% endfor %}
       <div id="output"></div>
       </div>
       </center>
@@ -159,14 +131,8 @@
 
       </div>
     </div>
-    <footer>
-      <div class="container-footer">
-      <p class="footers" ><font size = 10 style="color:black"><div style="text-align: center;">@-Test </div></font></p>
-      </div>
-    </footer>
-
+    
     <!DOCTYPE --------------------------------End Navigator-bar -------------------------------------html>
-    {% if user.is_authenticated %}<script>alert("Success : {{ user }}");</script>{% else %} <script>alert("Log out ");</script>{% endif %}
     <script type="text/javascript" src="static/css/test.js"></script>
     <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>

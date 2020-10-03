@@ -14,8 +14,19 @@ urlpatterns = [
     # name = ตัวแปรใน html <a href "{% url 'name' %}"">
 
     path('', views.LogIn, name="LogIn-First"),
+
     path('index', views.index, name='home'),
-    path('ViewPrice', views.ViewPrice, name='ViewPrice'),
+
+    path('searchfruit', views.search, name='searchfruit'),
+
+    path('AllFruit', views.showFruit, name='AllFruit'),
+
+    path('showfruit', views.showFruit, name='showfruit'),
+
+    path('addfarm', views.addfarm, name='addfarm'),
+
+    path('addfruit',views.addfruit, name ="addfruit"),
+
     path('CheckInform', views.CheckInform, name='CheckInform'),
    
     path('register', views.signup, name='register'),

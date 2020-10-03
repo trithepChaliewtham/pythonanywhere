@@ -11,12 +11,11 @@
     <link rel="stylesheet" href="static/css/flex.css">
   </head>
   <body class="body-set-frame">
-    <div class="container-menu-bar">
-      <div class="menu-bar-flex">
-          <div class="menu-bar-flex-item1">Home</div>
-          <div class="menu-bar-flex-item2">Contact</div>
-      </div>
-    </div>
-
+    {% for i in fruit %}
+    <p>{{ i.id }}</p><br>
+    <p>{{ i.Fruit_Name }}</p><br>
+    <p>{{ i.Price }}</p><br>
+    <p>{{ i.Season }}</p><br>
+    {% endfor %}
   </body>
 </html>
