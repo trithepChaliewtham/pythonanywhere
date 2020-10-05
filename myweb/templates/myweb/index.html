@@ -38,9 +38,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav">
           
-          <li class="nav-item dropdown">
-            <a href="CheckInform" id="themes" style="text-decoration:none">ViewPrice </a>
-            &nbsp; &nbsp;
+          
 
           <li class="nav-item dropdown">
             <a href="register" id="themes" style="text-decoration:none">Contact </a>
@@ -53,10 +51,15 @@
           <li class="nav-item dropdown">
               <a href="{% url 'addfruit' %}" id="button-log-out">เพิ่มข้อมูลผลไม้</a>
               &nbsp; &nbsp;
-            
+
           <li class="nav-item dropdown">
-              <a href="logout" id="button-log-out"><button   style="text-decoration:none">log outs </button></a>
-              &nbsp; &nbsp;
+                <a href="{% url 'searchfruit' %}" id="themes" style="text-decoration:none">ค้นหาผลไม้ </a>
+                &nbsp; &nbsp;
+          {% if user.is_authenticated %}<li class="nav-item dropdown">
+            <a href="logout" id="button-log-out"><button   style="text-decoration:none">log outs</button></a>
+            &nbsp; &nbsp;{% else %} <li class="nav-item dropdown">
+              <a href="{% url 'LogIn' %}" id="button-log-out" style="background-color: goldenrod;">Log In</a>{% endif %}
+          
             
 
 
@@ -68,19 +71,6 @@
   <hr>
   <!-- Typography
       ================================================== -->
-  <div class="flex-top-bar">
-    <div class="context-flex01">
-      <div class="item-flex01">
-        <input type="text" placeholder="เลือกผลไม้.." id="textin">
-      </div>
-    </div>
-    <div class="context-flex02">
-      <div class="item-flex02" id ="find">
-        ค้นหา
-      </div>
-    </div>
-
-    </div>
 
   
   </div>
@@ -166,7 +156,7 @@
     </footer>
 
     <!DOCTYPE --------------------------------End Navigator-bar -------------------------------------html>
-    {% if user.is_authenticated %}<script>alert("Success : {{ user }}");</script>{% else %} <script>alert("Log out ");</script>{% endif %}
+    
     <script type="text/javascript" src="static/css/test.js"></script>
     <script src="https://bootswatch.com/_vendor/jquery/dist/jquery.min.js"></script>
     <script src="https://bootswatch.com/_vendor/popper.js/dist/umd/popper.min.js"></script>

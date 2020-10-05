@@ -26,6 +26,8 @@ class Fruit(models.Model):
 
     FarmName = models.ForeignKey(Farm, on_delete=models.CASCADE)
     Season = models.ForeignKey(Season, on_delete=models.CASCADE)
+    img = models.CharField(max_length=255,blank=True)
+    imgfarm = models.CharField(max_length=255,blank=True)
 
     def __str__(self):
         
