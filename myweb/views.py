@@ -40,6 +40,9 @@ def signup(request):
 def index(req):
 	return render(req, 'myweb/index.html')
 
+def Contact(req):
+    	return render(req, 'myweb/Contact.html')
+
 def CheckInform(req):
     	return render(req, 'myweb/CheckInform.html')
 def LogIn(req):
@@ -50,6 +53,7 @@ def LogIn(req):
 
 def showFruit(testrequestreq):
     fruit = Fruit.objects.all()
+    print(fruit)
     return render(testrequestreq ,'myweb/AllFruit.html' ,{'fruit':fruit})
 
 def addfarm(req):

@@ -15,6 +15,8 @@ urlpatterns = [
 
     path('', views.LogIn, name="LogIn-First"),
 
+    path('Contact', views.Contact,name="Contact"),
+    
     path('index', views.index, name='home'),
 
     path('searchfruit', views.search, name='searchfruit'),
