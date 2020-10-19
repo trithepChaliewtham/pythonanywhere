@@ -20,7 +20,7 @@
 <body style="background-color :rgb(56, 28, 4);background-image: url(https://i.pinimg.com/originals/71/ce/81/71ce819f3e164b1cdcc92f40e12e6b18.jpg); width:100%; height:auto; position:absolute;" >
   <!DOCTYPE --------------------------------Add Image -------------------------------------html>
   
-  <img src="{{ staitc/}}}" class="image01" style="-webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  <img src="static/Fruit.jpg" class="image01" style="-webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
     box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);border-radius: 2rem;">
   
 
@@ -40,9 +40,7 @@
           
           
 
-          <li class="nav-item dropdown">
-            <a href="Contact" id="themes" style="text-decoration:none">Contact </a>
-            &nbsp; &nbsp;
+         
 
           <li class="nav-item dropdown">
               <a href="{% url 'AllFruit' %}" id="button-log-out">ดูรายการผลไม้</a>
@@ -55,7 +53,11 @@
           <li class="nav-item dropdown">
                 <a href="{% url 'searchfruit' %}" id="themes" style="text-decoration:none">ค้นหาผลไม้ </a>
                 &nbsp; &nbsp;
-          {% if user.is_authenticated %}<li class="nav-item dropdown">
+           <li class="nav-item dropdown">
+            <a href="Contact" id="themes" style="text-decoration:none">Contact </a>
+            &nbsp; &nbsp;
+            
+            {% if user.is_authenticated %}<li class="nav-item dropdown">
             <a href="logout" id="button-log-out"><button   style="text-decoration:none">log outs</button></a>
             &nbsp; &nbsp;{% else %} <li class="nav-item dropdown">
               <a href="{% url 'LogIn' %}" id="button-log-out" style="background-color: goldenrod;">Log In</a>{% endif %}
@@ -148,7 +150,7 @@
     </div>
     <footer>
       <div class="container-footer">
-      <p class="footers" ><font size = 10 style="color:black"><div style="text-align: center;">@-Test </div></font></p>
+      <p class="footers" ><font size = 10 style="color:black"><div style="text-align: center;">@-trithep.ch.62@ubu.ac.th</div></font></p>
       </div>
     </footer>
 

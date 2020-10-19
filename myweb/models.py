@@ -31,6 +31,6 @@ class Fruit(models.Model):
 
     def __str__(self):
         
-        return f'{self.Fruit_Name} - {self.Season} - {self.FarmName}';
+        return f'{self.Fruit_Name} - {self.Season} - {self.FarmName} - {self.Price}';
 
 

@@ -46,7 +46,7 @@ def Contact(req):
 def CheckInform(req):
     	return render(req, 'myweb/CheckInform.html')
 def LogIn(req):
-
+    
 	return render(req, 'myweb/LogIn.html')
 
 #---------- database function ----------#
@@ -96,6 +96,7 @@ def search(req):
                 except:
 
                     form = SearchForm()
+                    
                     context = {'form':form}
                     return render(req, 'myweb/SearchFruit.html',context)
                 fruits = Fruit.objects.filter(Price=keyword)
@@ -107,7 +108,6 @@ def search(req):
             elif searchby == '4':
 
                 fruits = Fruit.objects.filter(FarmName__Farm_Name__contains=keyword)
-                print(fruits)
             return render(req , "myweb/ShowFruit.html",{"fruits":fruits})
     else:
         form = SearchForm()
