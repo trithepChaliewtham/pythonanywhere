@@ -11,14 +11,6 @@ from .form import *
 
 
 
-# Create your views here.
-banana = "https://www.thailandmedical.news/uploads/editor/files/ANTIVIRALS.jpg"
-
-lemon = "https://share.upmc.com/wp-content/uploads/2014/10/lemon.png"
-
-watermelon = "https://dz.lnwfile.com/jrbazo.jpg"
-
-
 
 
 
@@ -53,7 +45,6 @@ def LogIn(req):
 
 def showFruit(testrequestreq):
     fruit = Fruit.objects.all()
-    print(fruit)
     return render(testrequestreq ,'myweb/AllFruit.html' ,{'fruit':fruit})
 
 def addfarm(req):

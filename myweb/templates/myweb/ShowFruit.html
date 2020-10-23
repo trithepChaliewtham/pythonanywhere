@@ -93,7 +93,7 @@
         <p>{{ fruit.Fruit_Name }}&nbsp;,&nbsp;{{ fruit.FarmName }}</p>
         <div style="padding-top:1rem;margin-left:15rem;margin-right:15rem ;border:2px solid black;background-color: gold;">
         <img src="{{ fruit.img }}" style="height: 250px;width:250px;margin-bottom:1rem;border-radius: 5px;">
-        <img src="{% static 'img' %}/{{ fruit.imgfarm }}" style="height: 250px;width:250px;margin-bottom:1rem;border-radius: 5px;">
+        <img src="{{ i.imgfarm }}" style="height: 250px;width:250px;margin-bottom:1rem;border-radius: 5px;">
         </div>
         {% endfor %}
 

@@ -30,7 +30,7 @@
   <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary" style="padding-top:0px;">
     <div class="container">
 
-      <p class="navbar-brand" id="Home" style="cursor:pointer;color:gold;margin-top:10px;">Home</p>
+      <p class="navbar-brand" id="Home" style="cursor:pointer;color:gold;margin-top:0px;">Home</p>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
         aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,24 +42,29 @@
 
          
 
-          <li class="nav-item dropdown">
-              <a href="{% url 'AllFruit' %}" id="button-log-out">ดูรายการผลไม้</a>
+          <li class="nav-item dropdown" style="margin-top:1.5rem;">
+              <a href="{% url 'AllFruit' %}" >ดูรายการผลไม้</a>
               &nbsp; &nbsp;
 
-          <li class="nav-item dropdown">
-              <a href="{% url 'addfruit' %}" id="button-log-out">เพิ่มข้อมูลผลไม้</a>
+          <li class="nav-item dropdown" style="margin-top:1.5rem;">
+              <a href="{% url 'addfruit' %}" >เพิ่มข้อมูลผลไม้</a>
               &nbsp; &nbsp;
 
-          <li class="nav-item dropdown">
+          <li class="nav-item dropdown" style="margin-top:1.5rem;">
                 <a href="{% url 'searchfruit' %}" id="themes" style="text-decoration:none">ค้นหาผลไม้ </a>
                 &nbsp; &nbsp;
-           <li class="nav-item dropdown">
+           <li class="nav-item dropdown" style="margin-top:1.5rem;">
             <a href="Contact" id="themes" style="text-decoration:none">Contact </a>
             &nbsp; &nbsp;
             
-            {% if user.is_authenticated %}<li class="nav-item dropdown">
-            <a href="logout" id="button-log-out"><button   style="text-decoration:none">log outs</button></a>
-            &nbsp; &nbsp;{% else %} <li class="nav-item dropdown">
+            {% if user.is_authenticated  %}
+            <li class="nav-item dropdown" style="margin-top:1rem;">
+              <a href="logout" id="button-log-out" style="color:#ff3399;font-size:25px;">log outs</a>
+            &nbsp; &nbsp;
+            <li class="nav-item dropdown" style="margin-top:1.5rem;margin-left:30rem;">
+              <p  id="button-log-out" style="color:gold;border:dotted;">Hello : {{ user }}</p>
+            &nbsp; &nbsp;{% else %} 
+            <li class="nav-item dropdown" style="margin-top:0.45rem;">
               <a href="{% url 'LogIn' %}" id="button-log-out" style="background-color: goldenrod;">Log In</a>{% endif %}
           
             

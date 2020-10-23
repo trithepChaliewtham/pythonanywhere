@@ -27,7 +27,7 @@
 
   <!DOCTYPE --------------------------------Navigator-bar -------------------------------------html>
   <div class="navbar navbar-expand-lg fixed-top navbar-dark bg-primary">
-    <div class="container">
+    <div class="container" >
 
       <a href="index">
         <p class="navbar-brand">Home</p>
@@ -59,8 +59,10 @@
     <div class="container-register" style="margin-left: 55vh;">
       <form method="POST">
         {% csrf_token %}
+        <div style="color:black;">
         {{ form.as_p }}
-        <button type="submit" > re</button>  
+        </div>
+        <button type="submit" > submit </button>  
       </form>
     </div>
   <!-- Headings -->
